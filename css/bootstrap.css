@@ -4154,22 +4154,10 @@ input[type="submit"].btn.btn-mini {
   min-height: 40px;
   padding-right: 20px;
   padding-left: 20px;
-  background-color: #fafafa;
-  background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
-  background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
-  background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
-  background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
-  background-repeat: repeat-x;
-  border: 1px solid #d4d4d4;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
   *zoom: 1;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 }
 
 .navbar-inner:before,
@@ -4194,7 +4182,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand {
   display: block;
   float: left;
-  padding: 10px 20px 10px;
+  padding: 0px 0px 10px 20px;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
@@ -4352,12 +4340,12 @@ input[type="submit"].btn.btn-mini {
   top: 0;
 }
 
-.navbar-fixed-top .navbar-inner,
+/*.navbar-fixed-top .navbar-inner,
 .navbar-static-top .navbar-inner {
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 1px 10px rgba(0, 0, 0, 0.1);
      -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 1px 10px rgba(0, 0, 0, 0.1);
           box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 1px 10px rgba(0, 0, 0, 0.1);
-}
+}*/
 
 .navbar-fixed-bottom {
   bottom: 0;
@@ -4388,10 +4376,11 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .nav > li > a {
   float: none;
-  padding: 10px 15px 10px;
-  color: #777777;
+  padding: 10px 25px 10px 25px;
+  font-weight: lighter;
+  color: #000;
   text-decoration: none;
-  text-shadow: 0 1px 0 #ffffff;
+  background-color: #1a171b;
 }
 
 .navbar .nav .dropdown-toggle .caret {
@@ -4400,20 +4389,14 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
-  color: #333333;
+  color: #e3003d;
   text-decoration: none;
-  background-color: transparent;
 }
 
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
-  color: #555555;
-  text-decoration: none;
-  background-color: #e5e5e5;
-  -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
-     -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
-          box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  color: #e3003d;
 }
 
 .navbar .btn-navbar {
@@ -4564,39 +4547,30 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse .navbar-inner {
-  background-color: #1b1b1b;
-  background-image: -moz-linear-gradient(top, #222222, #111111);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
-  background-image: -webkit-linear-gradient(top, #222222, #111111);
-  background-image: -o-linear-gradient(top, #222222, #111111);
-  background-image: linear-gradient(to bottom, #222222, #111111);
-  background-repeat: repeat-x;
-  border-color: #252525;
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+  background-color: none;
 }
 
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-  color: #999999;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #FFF;
 }
 
 .navbar-inverse .brand:hover,
 .navbar-inverse .nav > li > a:hover {
-  color: #ffffff;
+  color: #FFF;
 }
 
 .navbar-inverse .nav > li > a:focus,
 .navbar-inverse .nav > li > a:hover {
-  color: #ffffff;
-  background-color: transparent;
+  color: #e3003d;
+  background-color: #1a171b;
 }
 
 .navbar-inverse .nav .active > a,
 .navbar-inverse .nav .active > a:hover,
 .navbar-inverse .nav .active > a:focus {
-  color: #ffffff;
-  background-color: #111111;
+  color: #e3003d;
+  background-color: #1a171b;
 }
 
 .navbar-inverse .navbar-link {
@@ -5725,27 +5699,54 @@ a.badge:hover {
   margin-bottom: 0;
 }
 
+.heroBackgroundContainer{
+	position: relative;
+	width: auto;
+	height: auto;
+	background-color: #000;
+}
+
 .hero-unit {
-  padding: 60px;
+  position: relative;
+  min-height: 800px;
+  max-height: 800px;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 60px 0px 60px;
   margin-bottom: 30px;
-  background-color: #eeeeee;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  background-image: url('../img/TYNP9999N100_scion_FR_S_MY13_rear_wheel_sport_is_back_18x12_cropped.jpg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-unit-content{
+	position: absolute;
+	width: 45%;
+	max-width: 600px;
+	min-width: 250px;
+	top: 10%;
+	right: 0%;
 }
 
 .hero-unit h1 {
+  padding: 10px;
   margin-bottom: 0;
-  font-size: 60px;
+  font-family: "Myriad Pro", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: lighter;
+  font-size: 36px;
   line-height: 1;
   letter-spacing: -1px;
+  background-color: #FFF;
   color: inherit;
 }
 
 .hero-unit p {
+  padding: 10px;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
+  background-color: #FFF;
   color: inherit;
 }
 

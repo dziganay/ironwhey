@@ -48,5 +48,32 @@ $(document).ready(function() {
 	setCarouselActiveIndex();
 	setIndexIndicators();
 	theCarousel.view.on('slid', setCarouselActiveIndex );
+	
+	var heroVideo = $('#heroVideo');
+	heroVideo.on('play', function(){
+		$('#myCarousel').carousel('pause');
+	});
+	theCarousel.view.on('slide', function(){
+		heroVideo[0].pause();
+	});
 
+	var $modalVideo = $('#modalVideo');
+	var $modalCarousel = $('#modalCarousel');
+	
+	$modalVideo.on('play', function(){
+		$modalCarousel.carousel('pause');
+	});
+	$modalCarousel.on('slide', function(){
+		$modalVideo[0].pause();
+	});
+
+	$(document).on('click touchend', '.gallItem img', function(e){
+		var gallItemIndex = ($(this).parent().index()) - 1;
+		$('.modalOverlay, .galleryModal').addClass('showGalleryModal');
+		$modalCarousel.carousel(gallItemIndex);
+		$modalCarousel.carousel('pause');
+	});
+	$(document).on('click touchend', '.modalOverlay', function(e){
+		$('.modalOverlay, .galleryModal').removeClass('showGalleryModal');
+	});
 });

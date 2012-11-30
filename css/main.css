@@ -247,33 +247,45 @@ footer{
 		width: 250px;
 		height: 350px;
 	}
-	.linkGrid .span3 .imgOverlay{
+
+	.span3 .imgLinkCont .imgOverlay{
 		width: 230px;
 		height: 340px;
 	}
-	.carousel{
+	.row-fluid.results{
+		height: 350px;
+		margin-bottom: 40px;
+	}
+	.row-fluid.results .span3{
+		height: 350px;
+	}
+	
+	.carousel-inner .item img, .carousel-inner .item video{
 		max-height: 800px;
 	}
-	.carousel-inner .item img, .carousel-inner .item video{
+	.carousel{
 		max-height: 800px;
 	}
 }
 
 @media (min-width: 980px) {
-	
+	.row-fluid .results .span3{
+		width: 250px;
+	}
 	.row-fluid .span2.multiUseNav {
 		width: 120px;
 		margin-right: 20px;
 	}
-	.linkGrid .span3{
-		height: 350px;
-	}
+
 	.carousel{
 		max-height: 800px;
 	}
 }
 
 @media (max-width: 979px) and (min-width: 768px){
+	.row-fluid .results .span3{
+		width: 250px;
+	}
 	.linkGrid .span3 .imgOverlay{
 		width: 146px;
 		height: 222px;

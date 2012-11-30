@@ -208,7 +208,6 @@ ul.positionIndicators li.active{
 	color: #868686;
 }
 
-
 .modalOverlay{
 	display: none;
 	position: fixed;
@@ -234,6 +233,9 @@ ul.positionIndicators li.active{
 	display: block;
 }
 
+footer{
+	margin: 20px auto 30px auto;
+}
 
 @media (min-width: 1200px) {
 	
@@ -316,7 +318,9 @@ ul.positionIndicators li.active{
 		width: 230px;
 		height: 368px;
 	}
-	
+	footer{
+		padding-left: 20px;
+	}
 }
 
 @media (max-width: 480px) {
@@ -334,5 +338,8 @@ ul.positionIndicators li.active{
 		-moz-column-gap: 10px;
 		column-count: 1;
 		column-gap: 0px;
+	}
+	footer{
+		padding-left: 20px;
 	}
 }

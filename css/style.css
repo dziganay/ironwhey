@@ -1,0 +1,140 @@
+/*
+	Default styling for ATTIK build for 960
+*/
+html, body, .wrapper{
+	height: 100%;
+}
+h1, h2, h3, h4, h5, h6, a{
+	font-family: 'akzidenz-grotesk_bq_regularRg';
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	color: #e3003d;
+}
+/*Hero Image Overlay Text*/
+h1{
+	
+}
+/*Section Title Header*/
+h2{
+	color: #e3003d;
+}
+
+
+
+
+/*
+	Non-Semantic Classes
+*/
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}
+.clearFix{
+	clear: both;
+}
+.bgRed{
+	background-color: #e80e48;
+}
+.colorRed{
+	color: #e3003d;
+}
+.bgWhite{
+	background-color: #FFF;
+}
+.colorWhite{
+	color: #FFF;
+}
+
+
+
+/*
+	Main Content Containers
+*/
+.wraper{
+	position: relative;
+	height: 100%;
+	min-height: 100%;
+}
+header, .container, footer{
+	display: block;
+	position: relative;
+	width: 960px;
+	margin: 0px auto;
+	overflow: auto;
+}
+.row{
+	position: relative;
+	width: 100%;
+	clear: both;
+}
+.colMultiUse{
+	width: 120px;
+}
+.items{
+	width: 780px;
+	margin-left: 60px;
+}
+
+
+/*
+	Global Nav
+*/
+nav{
+	position: fixed;
+	overflow: hidden;
+	height: 40px;
+	z-index: 1000;
+}
+nav ul{
+	overflow: auto;
+	margin: 0px;
+	padding: 0px;
+}
+nav ul li{
+	float: left;
+	padding: 0 20px 0 20px;
+	background-color: #1a171b;
+}
+nav ul li:first-child{
+	padding: 0;
+}
+nav ul li a{
+	display: block;
+	color: #FFF;
+	line-height: 40px;
+	font-size: 12px;
+}
+
+
+
+/*
+	Hero Carousel
+*/
+.heroCarousel{
+	display: block;
+	position: relative;
+	width: 100%;
+	min-height: 225px;
+	max-height: 800px;
+	overflow: hidden;
+}
+.inner-carousel{
+	max-width: 1600px;
+	max-height: 800px;
+	margin: 0px auto;
+}
+.inner-carousel .item {
+	background: url('../img/hpFeat_HelloAttik.jpg') no-repeat;
+	background-size: contain;
+	max-height: 800px;
+}
+.inner-carousel .item img{
+	width: 100%;
+	max-height: 800px;
+	height: auto;
+}

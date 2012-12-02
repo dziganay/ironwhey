@@ -1,17 +1,27 @@
 /*
 	Default styling for ATTIK build for 960
 */
-html, body, .wrapper{
+html, body{
 	height: 100%;
+}
+ul{
+	list-style: none;
 }
 h1, h2, h3, h4, h5, h6, a{
 	font-family: 'akzidenz-grotesk_bq_regularRg';
 }
 a{
 	text-decoration: none;
+	color: #404040;
 }
 a:hover{
 	color: #e3003d;
+}
+p{
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0px;
 }
 /*Hero Image Overlay Text*/
 h1{
@@ -19,10 +29,35 @@ h1{
 }
 /*Section Title Header*/
 h2{
-	color: #e3003d;
+	color: #919191;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: lighter;
+	margin: 0px 0px 16px 0px;
 }
-
-
+/*Multiuse column header*/
+h3{
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: lighter;
+	margin: 8px 0px 20px 0px;
+	color: #919191;
+}
+h4{
+	font-size: 18px;
+	line-height: 16px;
+	color: #404040;
+	font-weight: lighter;
+	margin: 0px 0px 11px 0px;
+}
+/*modal caption*/
+h5{
+	display: block;
+	margin: 0px 0px 10px 0px;
+	color: #e3003d;
+	font-size: 18px;
+	line-height: 18px;
+}
 
 
 /*
@@ -36,6 +71,9 @@ h2{
 }
 .clearFix{
 	clear: both;
+}
+.show{
+	display: block;
 }
 .bgRed{
 	background-color: #e80e48;
@@ -55,10 +93,8 @@ h2{
 /*
 	Main Content Containers
 */
-.wraper{
+.wrapper{
 	position: relative;
-	height: 100%;
-	min-height: 100%;
 }
 header, .container, footer{
 	display: block;
@@ -68,17 +104,92 @@ header, .container, footer{
 	overflow: auto;
 }
 .row{
+	display: block;
 	position: relative;
 	width: 100%;
-	clear: both;
+	overflow: hidden;
+	margin-bottom: 30px;
 }
+
 .colMultiUse{
+	display: block;
 	width: 120px;
+	float: left;
+	border-top: 4px solid #919191;
 }
+.colMultiUse ul{
+	margin: 0px;
+	padding: 0px;
+}
+.colMultiUse ul li a{
+	font-size: 12px;
+}
+
 .items{
+	display: block;
 	width: 780px;
 	margin-left: 60px;
+	padding-bottom: 30px;
+	float: left;
 }
+.items.col1 p{
+	color: #404040;
+	font-size: 26px;
+	line-height: 36px;
+	-moz-column-count:1; /* Firefox */
+	-webkit-column-count:1; /* Safari and Chrome */
+	column-count:1;
+	-moz-column-gap:0px; /* Firefox */
+	-webkit-column-gap:0px; /* Safari and Chrome */
+	column-gap:0px;
+}
+.items.col2 p{
+	-moz-column-count:2; /* Firefox */
+	-webkit-column-count:2; /* Safari and Chrome */
+	column-count:2;
+	-moz-column-gap:20px; /* Firefox */
+	-webkit-column-gap:20px; /* Safari and Chrome */
+	column-gap:20px;
+}
+.items .col3{
+	width: 250px;
+	margin-left: 15px;
+	display: block;
+	float: left;
+}
+.items .col3:first-child{
+	margin-left: 0px;
+}
+.items .col3 p{
+	color: #868686;
+}
+
+.items.gallery a, .items.related a{
+	display: inline-block;
+}
+.items.gallery a{
+	padding: 0px;
+	margin: 0px 0px 0px 16px;
+}
+.items.gallery a:first-child{
+	margin: 0px;
+}
+
+.items.related a {
+	padding: 0px;
+	margin: 0px 0px 11px 11px;
+}
+.items.related a:nth-child(3n+1){
+	margin: 0px;
+}
+.sectionDivider{
+	border-bottom: 2px solid #cdcdcd;
+}
+.row.active .colMultiUse, .row.active .colMultiUse h3, .row.active .items h2{
+	color: #e3003d;
+	border-top-color: #e3003d;
+}
+
 
 
 /*
@@ -122,6 +233,7 @@ nav ul li a{
 	min-height: 225px;
 	max-height: 800px;
 	overflow: hidden;
+	margin-bottom: 58px;
 }
 .inner-carousel{
 	max-width: 1600px;
@@ -137,4 +249,70 @@ nav ul li a{
 	width: 100%;
 	max-height: 800px;
 	height: auto;
+}
+
+
+
+
+/*
+	Image Modal
+*/
+.overlay{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.9;
+	z-index: 9000;
+}
+.modal{
+	display: none;
+	position: fixed;
+	width: 960px;
+	height: 670px;
+	top: 50%;
+	left: 50%;
+	margin-top: -335px;
+	margin-left: -480px;
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	background-color: #333;
+	z-index: 9900;
+	overflow: hidden;
+}
+.modal .frame{
+	display: none;
+}
+.modal .frame .caption{
+	width: auto;
+	height: 60px;
+	background-color: #000;
+	padding: 10px 25px 0px 25px;
+}
+.modal .frame .caption a{
+	color: #919191;
+	font-size: 12px;
+}
+.modal .frame .caption a:hover{
+	color: #e3003d;
+}
+
+
+
+/*
+	Footer
+*/
+footer ul li{
+	float: left;
+	margin: 10px 20px 10px 20px;
+}
+footer ul li:first-child{
+	margin-left: 0px;
+}
+footer ul li a{
+	font-size: 12px;
+	line-height: 16px;
+	color: #404040;
+	text-transform: uppercase;
 }
